@@ -152,10 +152,6 @@
     align-items: center;
 }
 
-/* .timeline > li > .timeline-badge i {
-    height: auto;
-} */
-
 .timeline .timeline-heading > div h3, #fh5co-resume .timeline-title {
     font-weight: 600;
 }
