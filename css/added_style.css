@@ -97,8 +97,12 @@
 
 #fh5co-header .display-tc .fh5co-social-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+#fh5co-header .display-tc .fh5co-social-icons .resume-callout, #fh5co-header .display-tc .fh5co-social-icons div {
+    margin-bottom: 24px
 }
 
 /* ABOUT ME Section */
@@ -282,9 +286,29 @@
 /* REACH OUT Section */
 
 .final-callout-container {
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
     margin-bottom: 30px;
+    flex-wrap: wrap; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    margin-bottom: 24px;
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (min-width: 350px) {
+        grid-template-columns: 1fr 1fr;
+        div:first-of-type {
+            justify-content: flex-end;
+        }
+        div:last-child {
+            justify-content: flex-start;
+        }
+    }
 }
 
 .final-callout {
@@ -320,13 +344,6 @@
 
 #fh5co-started .fh5co-heading p {
     color: #ffffff;
-}
-
-.final-info-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    /* width: 80%; */
-    padding-left: 100px;
 }
 
 .final-info-grid:nth-child(2) {
@@ -371,4 +388,10 @@
 
 .gototop a {
     background-color: #1b4d89;
+}
+
+.reach-out-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
